@@ -1,48 +1,31 @@
 // jshint devel:true
 'use strict';
 
-var myDoughnutChart;
 var inputData;
 
 document.addEventListener('DOMContentLoaded', function() {
 
     inputData = [
     {
-        value: 21,
-        color: '#e64c65',
-        highlight: '#e64c65',
-        label: 'iOS'
+        percent: 21,
+        color: '#e64c65'
     },
     {
-        value: 48,
-        color: '#10a8ab',
-        highlight: '#10a8ab',
-        label: 'Mac'
+        percent: 48,
+        color: '#10a8ab'
     },
     {
-        value: 32,
-        color: '#fcb150',
-        highlight: '#fcb150',
-        label: 'Win'
+        percent: 32,
+        color: '#4fc4f6'
     },
     {
-        value: 9,
-        color: '#4fc4f6',
-        highlight: '#4fc4f6',
-        label: 'Linux'
+        percent: 9,
+        color: '#fcb150'
     }
 ];
 
-	var options = {
-    	percentageInnerCutout: 65,
-    	segmentShowStroke: false,
-    	responsive: true
-	};
-
     if(document.getElementById('doughChart')) {
-    	var ctx = document.getElementById('doughChart').getContext('2d');
-
-   		myDoughnutChart = new Chart(ctx).Doughnut(inputData, options);
+        donutDrawer('doughChart', inputData);
    	}
 
 });

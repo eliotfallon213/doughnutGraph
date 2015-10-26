@@ -25,11 +25,9 @@
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
+
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
 </head>
@@ -37,45 +35,44 @@
 <body>
     <div class="wrapper">
         <div class="inner-box">
-            <h1>OS Audience Stats</h1>
-            <figure id="doughnut-container">
-                <figcaption>June
-                    <br /><span>2015</span></figcaption>
-                <canvas id="doughChart" width="auto" height="auto">Your browser does not support canvas - go get Chrome!</canvas>
-                <div class="shaper"></div>
+            <h1 class="inner-box__pagehead">OS Audience Stats</h1>
+            <figure class="doughnut-container">
+                <figcaption class="doughnut-container__caption">June
+                    <br /><span class="doughnut-container__caption__span">2015</span></figcaption>
+                <canvas id="doughChart" class="doughnut-container__canvas" width="410" height="410">Your browser does not support canvas - go get Chrome!</canvas>
+                <div class="doughnut-container__shaper"></div>
             </figure>
-            <table id="values">
+            <table class="values-table">
                 <thead>
                     <tr>
-                        <td class="no-left-border"><span id="dataset-1">iOS</span></td>
-                        <td><span id="dataset-2">Mac</span></td>
-                        <td><span id="dataset-3">Linux</span></td>
-                        <td><span id="dataset-4">Win</span></td>
+                        <td class="values-table__tablecell values-table__tablecell--no-left-border values-table__tablecell--thead"><span class="values-table__theadspan values-table__theadspan--dataset1">iOS</span></td>
+                        <td class="values-table__tablecell values-table__tablecell--thead"><span class="values-table__theadspan values-table__theadspan--dataset2">Mac</span></td>
+                        <td class="values-table__tablecell values-table__tablecell--thead"><span class="values-table__theadspan values-table__theadspan--dataset3">Linux</span></td>
+                        <td class="values-table__tablecell values-table__tablecell--thead"><span class="values-table__theadspan values-table__theadspan--dataset4">Win</span></td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="no-left-border bl-rad">21<sup>%</sup></td>
-                        <td>48<sup>%</sup></td>
-                        <td>9<sup>%</sup></td>
-                        <td class="br-rad">32<sup>%</sup></td>
+                        <td class="values-table__tablecell values-table__tablecell--bl-rad values-table__tablecell--no-left-border values-table__tablecell--tbody">21<sup>%</sup></td>
+                        <td class="values-table__tablecell values-table__tablecell--tbody">48<sup>%</sup></td>
+                        <td class="values-table__tablecell values-table__tablecell--tbody">9<sup>%</sup></td>
+                        <td class="values-table__tablecell values-table__tablecell--br-rad values-table__tablecell--tbody">32<sup>%</sup></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <form id="newsletter" action="" method="post">
-            <input type="email" name="email" value="" placeholder="youremail@domain.com" />
-            <button type="submit">Signup for newsletter</button>
+        <form class="newsletter" action="" method="post">
+            <input class="newsletter__input" type="email" name="email" value="" placeholder="youremail@domain.com" />
+            <button class="newsletter__button" type="submit">Signup for newsletter</button>
             <div class="clear"></div>
         </form>
     </div>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <script src="/bower_components/Chart.js/Chart.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
+    <script src="scripts/donutdrawer.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>
