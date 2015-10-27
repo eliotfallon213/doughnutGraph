@@ -12,6 +12,10 @@ $buttonRed: #e64c65;
 
 @import "reset";
 
+::-webkit-input-placeholder, :-moz-placeholder,  ::-moz-placeholder , :-ms-input-placeholder {
+   color: #dddddd;
+}
+
 
 .clear {
   clear: both;
@@ -156,7 +160,7 @@ body {
     border-bottom-left-radius:5px;
     border-top-left-radius:5px;
     padding: 0 20px;
-    color: #dddddd;
+    color: #000000;
   }
   &__button {
     font-size: 1em;
