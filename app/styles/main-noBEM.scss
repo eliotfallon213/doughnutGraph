@@ -1,0 +1,178 @@
+
+
+$innerBg: #394164;
+$pageBg: #1e243c;
+$tableBg: #50587b;
+$palebluefont: #949dbb;
+$data1: #e64c65;
+$data2: #10a8ab;
+$data3: #fcb150;
+$data4: #4fc4f6;
+$buttonRed: #e64c65;
+
+
+
+@import "reset";
+
+.clear {
+  clear: both;
+}
+
+.bl-rad {
+  border-bottom-left-radius: 5px;
+}
+
+.br-rad {
+  border-bottom-right-radius: 5px;
+}
+
+body {
+  background: $pageBg;
+  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 600px;
+  min-width: 250px;
+  width: 95%;
+  margin: 44px auto;
+  text-align: center;
+
+  .inner-box {
+    background: $innerBg;
+    border-radius: 5px;
+  }
+
+  h1 {
+    padding-top: 74px;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+
+}
+
+#doughnut-container {
+
+  max-width: 410px;
+  width: 95%;
+  position: relative;
+
+  margin: 84px auto 110px;
+
+  figcaption {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 36px;
+    left: 50%;
+    top: 50%;
+    width: 130px;
+    height: 113px;
+    margin-top: -56px;
+    margin-left: -65px;
+    font-weight: bold;
+    span {
+      font-weight: normal;
+      font-size: 54px;
+      line-height: 54px;
+      color: $palebluefont;
+    }
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .shaper {
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    padding-bottom: 100%;
+  }
+
+}
+
+table#values {
+    width: 100%;
+    margin-bottom: 20px;
+    td {
+      width: 25%;
+      border-left: 1px solid $pageBg;
+      background: $tableBg;
+    }
+
+    thead td {
+      color: $palebluefont;
+      height: 74px;
+      line-height: 74px;
+      vertical-align: middle;
+
+      span {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    tbody td {
+      vertical-align: top;
+      height: 78px;
+      font-size: 36px;
+    }
+
+    .no-left-border {
+      border-left: 0;
+    }
+    #dataset-1 {
+      border-top: 8px solid $data1;
+    }
+    #dataset-2 {
+      border-top: 8px solid $data2;
+    }
+    #dataset-3 {
+      border-top: 8px solid $data3;
+    }
+    #dataset-4 {
+      border-top: 8px solid $data4;
+    }
+
+}
+
+#newsletter {
+
+  margin: 16px auto 0;
+  width: 100%;
+
+  input, button {
+    float: left;
+    height: 68px;
+    outline: 0;
+    border: 0;
+  }
+
+  input {
+    width: 62%;
+    border-bottom-left-radius:5px;
+    border-top-left-radius:5px;
+    padding: 0 20px;
+    color: #dddddd;
+  }
+  button {
+    font-size: 1em;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    background: $buttonRed;
+    width: 38%;
+    border-left: 1px solid $pageBg;
+    box-sizing: border-box;
+    color: #ffffff;
+
+  }
+
+}
