@@ -28,9 +28,9 @@ function donutDrawer(canvasId, dataSet) {
     var start = new Date().getTime();
     var end = start + duration;
 
-    //callRender();
+    callRender();
 
-    var callRender = function() {
+    function callRender() {
         context.clearRect(0, 0, c.width, c.height);
 
         //How far into the animation are we?
@@ -48,15 +48,17 @@ function donutDrawer(canvasId, dataSet) {
 
             var startAngRad = (startPercent / totalData) * Math.PI * 2 * progress;
             var endAngRad = startAngRad + (dataSet[i].percent / totalData) * Math.PI * 2 * progress;
-
+            console.log(startAngRad);
             drawDonut(startAngRad, endAngRad, dataSet[i].color);
             startPercent = startPercent + dataSet[i].percent;
 
         }
 
+        console.log(progress);
+
         // Redraw
-        if (progress < 1) requestAnimationFrame(callRender);
-    }();
+        if (progress < 1)  requestAnimationFrame(callRender);
+    };
 
     // drawDonut() function draws arc between two angles
     function drawDonut(sRadian, eRadian, color) {
