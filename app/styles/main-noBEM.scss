@@ -14,6 +14,10 @@ $buttonRed: #e64c65;
 
 @import "reset";
 
+::-webkit-input-placeholder, :-moz-placeholder,  ::-moz-placeholder , :-ms-input-placeholder {
+   color: #dddddd;
+}
+
 .clear {
   clear: both;
 }
